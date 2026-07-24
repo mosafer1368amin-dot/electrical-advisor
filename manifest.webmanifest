@@ -1,0 +1,31 @@
+{
+  "short_name": "ولتاژ",
+  "name": "آموزش و شبیه‌ساز برق ساختمان (ولتاژ)",
+  "description": "آموزش هوشمند و شبیه‌ساز برق ساختمان بر اساس ضوابط مباحث ۱۳ و ۱۴ مقررات ملی ساختمان",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#090d16",
+  "theme_color": "#f59e0b",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/"
+}

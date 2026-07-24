@@ -1,0 +1,6 @@
+{
+  "name": "آموزش برق ساختمان",
+  "description": "سامانه تعاملی و هوشمند آموزش برق ساختمان، شبیه‌ساز مدارهای الکتریکی، محاسبات تخصصی سیم و لوله، آزمون خودسنجی و دستیار هوشمند رفع عیب برق ساختمان",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

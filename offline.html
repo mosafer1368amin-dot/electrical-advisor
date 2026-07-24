@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شما آفلاین هستید - ولتاژ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #090d16;
+      --card-bg: #0f172a;
+      --primary: #f59e0b;
+      --primary-hover: #fbbf24;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text);
+      font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Beautiful glowing grid background */
+    .bg-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, rgba(9, 13, 22, 0) 70%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 480px;
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid rgba(245, 158, 11, 0.15);
+      border-radius: 24px;
+      padding: 40px 30px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Pulsing Bolt Icon */
+    .icon-wrapper {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(245, 158, 11, 0.1);
+      border-radius: 50%;
+      border: 2px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .icon-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 2px solid var(--primary);
+      animation: pulse 2s infinite;
+      opacity: 0;
+    }
+
+    .bolt {
+      width: 48px;
+      height: 48px;
+      fill: var(--primary);
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, var(--primary), #d97706);
+      color: #090d16;
+      border: none;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px -3px rgba(245, 158, 11, 0.4);
+      background: linear-gradient(135deg, var(--primary-hover), var(--primary));
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(1.4);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <div class="container">
+    <div class="icon-wrapper">
+      <svg class="bolt" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 10V3L4 14H11V21L20 10H13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    
+    <span class="badge">اتصال قطع شد</span>
+    <h1>شما آفلاین هستید!</h1>
+    <p>
+      برای مشاهده بخش‌های مختلف و شبیه‌سازهای ولتاژ به اینترنت نیاز است. لطفاً اتصال اینترنت گوشی یا کامپیوتر خود را بررسی کرده و مجدداً تلاش کنید.
+      <br>
+      البته نگران نباشید، بخش‌هایی که قبلاً بازدید کرده‌اید همچنان به صورت آفلاین باز خواهند شد!
+    </p>
+    
+    <button class="btn" onclick="window.location.reload()">
+      تلاش مجدد و بروزرسانی صفحه
+    </button>
+  </div>
+</body>
+</html>
