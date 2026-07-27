@@ -1,4 +1,4 @@
-import express from "express";
+import express from "express";;
 import path from "path";
 import dotenv from "dotenv";
 import { GoogleGenAI } from "@google/genai";
@@ -30,7 +30,7 @@ app.use((err: any, req: any, res: any, next: any) => {
 let ai: GoogleGenAI | null = null;
 try {
   const apiKey = process.env.GEMINI_API_KEY;
-  if (apiKey) {
+  if (apiKey) {;
     ai = new GoogleGenAI({
       apiKey,
       httpOptions: {

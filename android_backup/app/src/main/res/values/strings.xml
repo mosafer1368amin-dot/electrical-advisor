@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Electrical Advisor</string>
+    <string name="title_activity_main">Electrical Advisor</string>
+    <string name="package_name">com.electrical.advisor</string>
+    <string name="custom_url_scheme">com.electrical.advisor</string>
+</resources>
