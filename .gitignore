@@ -8,3 +8,6 @@ electrical-advisor.keystore
 keystore.txt
 *.jks
 *.keystore
+project-with-android.zip
+android_backup/
+*.zip

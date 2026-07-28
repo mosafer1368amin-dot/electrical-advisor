@@ -1,0 +1,47 @@
+
+> react-example@0.0.0 build
+> vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2680 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/assets/manifest-B3_T8sgV.webmanifest      0.82 kB
+dist/index.html                                1.29 kB │ gzip:   0.68 kB
+dist/assets/icon-vqfmEcDt.svg                  1.39 kB │ gzip:   0.57 kB
+dist/assets/index--bLNYNUw.css                79.67 kB │ gzip:  12.51 kB
+dist/assets/index-B1HiX4wK.js              1,313.99 kB │ gzip: 351.19 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 24.12s
+✘ [ERROR] Must use "outdir" when there are multiple input files
+
+1 error
+node:child_process:965
+    throw err;
+    ^
+
+Error: Command failed: /data/data/com.termux/files/home/electrical-advisor-source (2)/node_modules/@esbuild/android-arm64/bin/esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs
+    at genericNodeError (node:internal/errors:998:15)
+    at wrappedFn (node:internal/errors:543:14)
+    at checkExecSyncError (node:child_process:926:11)
+    at Object.execFileSync (node:child_process:962:15)
+    at Object.<anonymous> (/data/data/com.termux/files/home/electrical-advisor-source (2)/node_modules/esbuild/bin/esbuild:222:28)
+    at Module._compile (node:internal/modules/cjs/loader:1873:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:2013:10)
+    at Module.load (node:internal/modules/cjs/loader:1596:32)
+    at Module._load (node:internal/modules/cjs/loader:1398:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19) {
+  status: 1,
+  signal: null,
+  output: [ null, null, null ],
+  pid: 4794,
+  stdout: null,
+  stderr: null
+}
+
+Node.js v26.3.1

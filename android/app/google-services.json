@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "35053402724",
+    "project_id": "amin3-13872",
+    "storage_bucket": "amin3-13872.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35053402724:android:b81f04bceb9a94a1bf7d71",
+        "android_client_info": {
+          "package_name": "com.electrical.advisor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD95BXzX-HMrnnum1fgJMQjtvLIS6m3WyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35053402724:android:3372da14247c8054bf7d71",
+        "android_client_info": {
+          "package_name": "com.karyab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD95BXzX-HMrnnum1fgJMQjtvLIS6m3WyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
