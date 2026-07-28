@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply from: "../variables.gradle"
+
 android {
     namespace "com.electrical.advisor"
     compileSdkVersion 35
@@ -42,7 +42,7 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
 }
-
+apply from: "../variables.gradle"
 apply from: 'capacitor.build.gradle'
 
 try {
