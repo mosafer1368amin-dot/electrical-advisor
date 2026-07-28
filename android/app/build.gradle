@@ -23,7 +23,7 @@ android {
         release {
             storeFile file("electrical-advisor.keystore")
            storePassword "Electrical@2026"
-keyAlias "electrical-advisor"
+keyAlias "electrical"
 keyPassword "Electrical@2026"
         }
     }
