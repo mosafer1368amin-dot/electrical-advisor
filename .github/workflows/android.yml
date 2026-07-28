@@ -26,8 +26,10 @@ jobs:
 
       - name: Install packages
         run: npm install
-- name: Build web
-  run: npm run build
+
+      - name: Build web
+        run: npm run build
+
       - name: Sync Capacitor
         run: npx cap sync android
 
