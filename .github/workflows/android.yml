@@ -38,11 +38,11 @@ jobs:
           echo "storePassword=${{ secrets.KEYSTORE_PASSWORD }}" > android/key.properties
           echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
           echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
-          echo "storeFile=release-key.jks" >> android/key.properties
+          echo "storeFile=electrical-advisor.keystore" >> android/key.properties
 
       - name: Decode keystore
         run: |
-          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > android/app/release-key.jks
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > android/app/electrical-advisor.keystore
 
       - name: Build APK
         run: |
