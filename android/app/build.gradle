@@ -24,7 +24,7 @@ android {
             storeFile file("electrical-advisor.keystore")
             storePassword System.getenv("Electrical@2026")
             keyAlias System.getenv("KEY_ALIAS")
-            keyPassword System.getenv("Electrical@2026")
+            keyPassword System.getenv"Electrical@2026"
         }
     }
 
