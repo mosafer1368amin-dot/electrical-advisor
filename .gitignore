@@ -11,3 +11,4 @@ keystore.txt
 project-with-android.zip
 android_backup/
 *.zip
+.env
