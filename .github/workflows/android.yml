@@ -1,4 +1,4 @@
-name: Build Signed AAB
+name: Build Signed Android
 
 on:
   push:
@@ -37,7 +37,7 @@ jobs:
         run: |
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > android/app/electrical-advisor.keystore
 
-      - name: Build Signed AAB
+      - name: Build Signed APK & AAB
         env:
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
@@ -45,9 +45,15 @@ jobs:
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew bundleRelease
+          ./gradlew assembleRelease bundleRelease
 
-      - name: Upload AAB
+      - name: Upload Signed APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: signed-apk
+          path: android/app/build/outputs/apk/release/app-release.apk
+
+      - name: Upload Signed AAB
         uses: actions/upload-artifact@v4
         with:
           name: signed-aab
